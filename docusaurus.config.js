@@ -25,13 +25,13 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            "https://github.com/DioxusChina/website/tree/main/",
+            "https://github.com/DioxusChina/website/tree/master/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            "https://github.com/DioxusChina/website/tree/main/",
+            "https://github.com/DioxusChina/website/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
