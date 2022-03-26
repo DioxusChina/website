@@ -32,6 +32,13 @@ const sidebars = {
         "quick-start/rsx",
       ],
     },
+    {
+      type: "category",
+      label: "页面设计",
+      items: [
+        "ui-design/style",
+      ]
+    },
   ],
 };
 

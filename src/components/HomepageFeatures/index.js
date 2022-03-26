@@ -5,7 +5,6 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: '轻松布局',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
      使用特定的 RSX 格式来轻松布局您的UI页面。它比 HTML 更加简洁易读。
@@ -14,7 +13,6 @@ const FeatureList = [
   },
   {
     title: '组件封装',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
       通过封装组件管理其内部的状态信息，并将多个组件组合成复杂的UI程序。
@@ -23,7 +21,6 @@ const FeatureList = [
   },
   {
     title: '多平台支持',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
       组件和 Hooks 可以被同时用于 WEB、桌面、移动设备、服务器等平台应用！
@@ -35,9 +32,6 @@ const FeatureList = [
 function Feature({Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
