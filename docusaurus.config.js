@@ -80,7 +80,7 @@ const config = {
             title: "社区",
             items: [
               {
-                label: "QQ Group",
+                label: "QQ 群",
                 href: "https://qm.qq.com/cgi-bin/qm/qr?k=WYctgoX1PhbnVAEXEZOnT2yHY3_D4K4g&jump_from=webapi",
               },
             ],
@@ -89,17 +89,17 @@ const config = {
             title: "其他",
             items: [
               {
-                label: "Blog",
+                label: "博客",
                 to: "/blog",
               },
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "开源仓库",
+                href: "https://github.com/DioxusChina",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Dioxus 中文社区`,
+        copyright: `Copyright © ${new Date().getFullYear()} DioxusChina`,
       },
       prism: {
         theme: lightCodeTheme,

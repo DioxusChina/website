@@ -1,47 +1,43 @@
 ---
-sidebar_position: 1
+id: intro
+title: 项目介绍
 ---
 
-# Tutorial Intro
+:::tip
+本教程由开发组成员 [YuKun Liu](https://github.com/mrxiaozhuox) 撰写，并非完全照搬翻译官方文档。
+:::
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Dioxus 是一款用于构建跨平台用户界面的框架。这本指南将带领你学习并使用它。
 
-## Getting Started
+在开始之前，先贴上一份 `Hello World` 代码：
 
-Get started by **creating a new site**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+```rust
+fn App(cx: Scope) -> Element {
+    let (count, set_count) = use_state(&cx, || 0);
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+    cx.render(rsx!(
+        h1 { "High-Five counter: {count}" }
+        button { onclick: move |_| set_count(count + 1), "Up high!" }
+        button { onclick: move |_| set_count(count - 1), "Down low!" }
+    ))
+};
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## 功能亮点
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- 参照 React 设计，使得相关开发人员过渡简单。
+- 强大状态管理系统以及易用的 `Hooks` 设计。
+- 桌面应用原生支持，提供部分常用 API 可调用。
+- 简洁的 `RSX` 界面声明格式，比 HTML 更加易读。
 
-## Start your site
+## 多平台支持
 
-Run the development server:
+Dioxus 支持多平台开发，这意味着你的大部分代码可以在任意平台下被构建使用。
 
-```bash
-cd my-website
-npm run start
-```
+目前为止，我们所支持的平台有：
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- 网页应用（使用 WASM 构建）
+- 桌面应用（使用 Wry 构建）
+- 移动应用（使用 Wry 构建）
+- 终端应用（使用 Rink 构建）
