@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Dioxus 中国",
+  title: "Dioxus 中文网",
   tagline: "帮助您快速构建可靠的用户界面程序。",
   url: "https://dioxus.cn",
   baseUrl: "/",
@@ -44,7 +44,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Dioxus 中国",
+        title: "Dioxus 中文网",
         logo: {
           alt: "Logo",
           src: "img/logo.svg",

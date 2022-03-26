@@ -10,7 +10,7 @@ title: RSX格式
 ```html
 <div style="text-align:center;">
     <h1>Hello Dioxus</h1>
-    <a href="https://www.dioxus.cn">Dioxus 中国</a>
+    <a href="https://www.dioxus.cn">Dioxus 中文网</a>
     <p class="content">帮助您快速构建可靠的用户界面程序。</p>
 </div>
 ```
@@ -23,7 +23,7 @@ rsx! {
         h1 { "Hello Dioxus" }
         a {
             href: "https://www.dioxus.cn/",
-            "Dioxus 中国"
+            "Dioxus 中文网"
         }
         p {
             class: "content",
