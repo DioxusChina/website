@@ -60,3 +60,30 @@ fn App(cx: Scope) -> Element {
 ```
 数组：[1, 2, 3, 4, 5]
 ```
+
+### Element 嵌套
+
+我们可以将一个 Element 类型嵌套到另一个 RSX 之中：
+
+```rust
+fn App(cx: Scope) -> Element {
+    let sub_element = cx.render(rsx! {
+        h1 { "标题" }
+    });
+    cx.render(rsx! {
+        div {
+            sub_element
+        }
+    })
+}
+```
+
+:::info
+`Element` 实质上就是 `Option<VNode>` 的别名，所以说它也可以返回一个 `None` 值。
+:::
+
+### 变量的刷新
+
+目前我们无法通过变量的更新来刷新页面内容，但是使用 `Hooks` 可以做到，我们将在后面的章节讲解。
+
+以目前的已学的内容：我们可以通过变量输出内容到页面，但是无法输入一些新的事件以及更新渲染。
