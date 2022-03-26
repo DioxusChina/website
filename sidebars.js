@@ -37,6 +37,7 @@ const sidebars = {
       label: "页面设计",
       items: [
         "ui-design/style",
+        "ui-design/dyn-content",
       ]
     },
   ],
