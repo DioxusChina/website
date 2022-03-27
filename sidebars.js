@@ -48,7 +48,8 @@ const sidebars = {
       label: "组件封装",
       items: [
         "components/intro",
-        "components/properties"
+        "components/properties",
+        "components/children"
       ]
     }
   ],
