@@ -51,6 +51,13 @@ const sidebars = {
         "components/properties",
         "components/children"
       ]
+    },
+    {
+      type: "category",
+      label: "交互性",
+      items: [
+        "interaction/hooks"
+      ]
     }
   ],
 };
