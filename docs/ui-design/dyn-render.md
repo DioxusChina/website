@@ -1,5 +1,5 @@
 ---
-id: dyn-content
+id: dyn-render
 title: 变量渲染
 ---
 
