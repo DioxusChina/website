@@ -58,7 +58,7 @@ const config = {
           },
           { to: "/blog", label: "博客", position: "left" },
           {
-            href: "https://github.com/dioxus-cn/",
+            href: "https://github.com/DioxusChina/",
             label: "仓库",
             position: "right",
           },

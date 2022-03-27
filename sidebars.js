@@ -47,7 +47,8 @@ const sidebars = {
       type: "category",
       label: "组件封装",
       items: [
-        "components/intro"
+        "components/intro",
+        "components/properties"
       ]
     }
   ],
