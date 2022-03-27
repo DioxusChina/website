@@ -39,9 +39,17 @@ const sidebars = {
         "ui-design/style",
         "ui-design/dyn-render",
         "ui-design/cond-render",
-        "ui-design/list-render"
+        "ui-design/list-render",
+        "ui-design/special-attributes"
       ]
     },
+    {
+      type: "category",
+      label: "组件封装",
+      items: [
+        "components/intro"
+      ]
+    }
   ],
 };
 
