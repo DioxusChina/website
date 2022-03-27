@@ -38,6 +38,7 @@ const sidebars = {
       items: [
         "ui-design/style",
         "ui-design/dyn-content",
+        "ui-design/cond-render",
       ]
     },
   ],
