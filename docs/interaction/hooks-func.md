@@ -5,7 +5,7 @@ title: Hooks 函数
 
 在上一章中我们介绍了最常用的 Hook 函数：`use_state`
 
-那么在这一章节中我们将介绍 `Dioxus-Hooks` 包中的所有函数。
+那么在这一章节中我们将介绍 `Dioxus-Hooks` 包中的其他函数。
 
 ## UseRef
 
