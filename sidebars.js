@@ -56,7 +56,8 @@ const sidebars = {
       type: "category",
       label: "交互性",
       items: [
-        "interaction/hooks"
+        "interaction/hooks",
+        "interaction/hooks-func"
       ]
     }
   ],
