@@ -86,15 +86,15 @@ const config = {
             ],
           },
           {
-            title: "其他",
+            title: "友情链接",
             items: [
               {
-                label: "官方博客",
-                to: "/blog",
+                label: "Rust 圣经",
+                href: "https://course.rs/",
               },
               {
-                label: "开源仓库",
-                href: "https://github.com/DioxusChina",
+                label: "Rustt 翻译组",
+                href: "https://rustt.org",
               },
             ],
           },
