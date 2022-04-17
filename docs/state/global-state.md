@@ -102,3 +102,5 @@ fn Child(cx: Scope) -> Element {
     let name = cx.use_hook(|_| cx.consume_context::<Title>());
 }
 ```
+
+所有提供的 `Context` 类型必须可被 Clone
