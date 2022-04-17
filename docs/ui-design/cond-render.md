@@ -30,7 +30,7 @@ struct AppProps {
 ```rust
 // 这里我们就将上面所编写的 Props 绑入了组件中
 fn App(cx: Scope<AppProps>) -> Element {
-    if props.account_state {
+    if cx.props.account_state {
         cx.render(rsx! {
             Dashboard { }
         })
