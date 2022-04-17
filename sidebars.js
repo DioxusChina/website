@@ -60,6 +60,14 @@ const sidebars = {
         "interaction/hooks-func",
         "interaction/user-input"
       ]
+    },
+    {
+      type: "category",
+      label: "状态管理",
+      items: [
+        "state/local-state",
+        "state/global-state"
+      ]
     }
   ],
 };
