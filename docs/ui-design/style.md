@@ -9,7 +9,7 @@ title: 页面样式
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         style {
-            "#app { width:100%; background-color:red; }"
+            [ ".app { width:100%; background-color:red; }" ]
         }
         div {
             class: "app",

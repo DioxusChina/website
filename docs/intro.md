@@ -14,12 +14,12 @@ Dioxus 是一款用于构建跨平台用户界面的框架。这本指南将带�
 
 ```rust
 fn App(cx: Scope) -> Element {
-    let (count, set_count) = use_state(&cx, || 0);
+    let count = use_state(&cx, || 0);
 
     cx.render(rsx!(
         h1 { "High-Five counter: {count}" }
-        button { onclick: move |_| set_count(count + 1), "Up high!" }
-        button { onclick: move |_| set_count(count - 1), "Down low!" }
+        button { onclick: move |_| count += 1, "Up high!" }
+        button { onclick: move |_| count -= 1, "Down low!" }
     ))
 };
 ```
