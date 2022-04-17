@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`Dioxus`}
-      description="Description will go into a meta tag in <head />">
+      description="Dioxus中文网">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
