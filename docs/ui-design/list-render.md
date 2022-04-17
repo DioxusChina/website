@@ -42,7 +42,7 @@ let ele = blogs.iter().map(|(title, content)| {
 
 rsx!(
     div {
-        el
+        ele
     }
 )
 ```
