@@ -103,4 +103,47 @@ fn Child(cx: Scope) -> Element {
 }
 ```
 
-所有提供的 `Context` 类型必须可被 Clone
+所有提供的 `Context` 类型必须可被克隆，因为它会在每一次 `consume_context` 执行时被复制。
+
+## Fermi
+
+:::info
+Fermi 先前是一款官方发布的 **独立** 全局状态包，但目前已经加入到 Dioxus 之中。
+```
+dioxus = { version = "0.2.3", features = ["fermi", ...] }
+```
+你需要通过 features 来引入它。
+:::
+
+我们使用 Fermi 中的 Atom 类型创建一个 static 的闭包值。
+
+```rust
+static NAME: Atom<&str> = |_| "DioxusChina";
+```
+
+接下来我们便可以在程序的任何地方 读/写 这一数据了：
+
+```rust
+fn NameCard(cx: Scope) -> Element {      
+    let name = use_read(&cx, NAME);
+    cx.render(rsx!{ h1 { "Hello, {name}"} })
+}
+// <h1>Hello, DioxusChina</h1>
+```
+
+写入数据则是使用 `use_set` 函数：
+
+
+```rust
+fn NameCard(cx: Scope) -> Element {      
+    let set_name = use_set(&cx, NAME);
+    cx.render(rsx!{
+        button {
+            onclick: move |_| set_name("Fermi"),
+            "Set name to fermi"
+        }
+    })
+}
+```
+
+这里只是简单的介绍了使用方法，具体的实现与其他功能将在后续涉及。
