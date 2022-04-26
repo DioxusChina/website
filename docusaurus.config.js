@@ -58,6 +58,11 @@ const config = {
           },
           { to: "/blog", label: "博客", position: "left" },
           {
+            href: "https://qm.qq.com/cgi-bin/qm/qr?k=WYctgoX1PhbnVAEXEZOnT2yHY3_D4K4g&jump_from=webapi",
+            label: "Q群：863409183",
+            position: "right", 
+          },
+          {
             href: "https://github.com/DioxusChina/",
             label: "仓库",
             position: "right",
