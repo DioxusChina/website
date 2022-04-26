@@ -68,6 +68,11 @@ const sidebars = {
         "state/local-state",
         "state/global-state"
       ]
+    },
+    {
+      type: "doc",
+      id: "scripts",
+      label: "脚本交互"
     }
   ],
 };
