@@ -4,7 +4,7 @@ title: 项目介绍
 ---
 
 :::tip
-本教程由开发组成员 [YuKun Liu](https://github.com/mrxiaozhuox) 撰写，并非完全照搬翻译官方文档。
+本教程并非完全照搬翻译官方文档，仓库地址：[DioxusChina/website](https://github.com/DioxusChina/website)
 :::
 
 Dioxus 是一款用于构建跨平台用户界面的框架。这本指南将带领你学习并使用它。
