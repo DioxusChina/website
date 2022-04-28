@@ -9,7 +9,7 @@ title: 窗口控制
 
 > 目前 Dioxus 仅支持单窗口模式（当前指 **0.2.X** 版本）
 
-## 启动参数
+## 启动参数配置
 
 在 Main 函数中使用 `launch_cfg` 方法可以完成一次初始化 window 配置，你可以在这里配置 *窗口标题、程序图标、窗口大小、是否可拖动、是否可调整大小、最大/最小窗口大小* 等各类信息。
 
@@ -64,3 +64,23 @@ fn App(cx: Scope) -> Element {
     })
 }
 ```
+
+### API 列表
+
+- `drag(&self)` - 实现窗口拖拽，仅在鼠标按下时可用。
+- `set_minimized(&self, minimized: bool)` - 窗口最小化。
+- `set_maximized(&self, maximized: bool)` - 窗口最大化。
+- `set_visible(&self, visible: bool)` - 窗口是否可见。
+- `close(&self)` - 关闭窗口。
+- `focus(&self)` - 设置窗口为焦点。
+- `set_fullscreen(&self, fullscreen: bool)` - 切换窗口全屏模式。
+- `set_resizable(&self, resizable: bool)` - 窗口是否可被调整大小。
+- `set_always_on_top(&self, top: bool)` - 窗口始终在最顶端。
+- `set_cursor_visible(&self, visible: bool)` - 设置光标是否可见。
+- `set_title(&self, title: &str)` - 设置窗口标题名称。
+- `set_decorations(&self, decoration: bool)` - 是否显示窗口标题栏及顶部栏。
+- `devtool(&self)` - 开启开发者工具。
+
+:::caution
+`use_window` 仅在 Desktop Feature 下可被使用。
+:::
