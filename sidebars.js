@@ -73,6 +73,11 @@ const sidebars = {
       type: "doc",
       id: "scripts",
       label: "脚本交互"
+    },
+    {
+      type: "doc",
+      id: "desktop-window",
+      label: "窗口控制"
     }
   ],
 };

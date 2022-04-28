@@ -7,7 +7,7 @@ title: 脚本交互
 
 那么本章节我们将介绍在不同的平台下使用不同的解决方案来完成这一需求。
 
-## useEval 支持
+## useEval 方法
 
 在 [#318](https://github.com/DioxusLabs/dioxus/pull/318) 中添加了这一方法，
 它允许开发者获取一个 eval 函数用于单向的执行 Javascript 脚本代码。
