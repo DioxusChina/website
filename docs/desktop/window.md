@@ -1,5 +1,5 @@
 ---
-id: desktop-window
+id: window
 title: 窗口控制
 ---
 

@@ -75,9 +75,11 @@ const sidebars = {
       label: "脚本交互"
     },
     {
-      type: "doc",
-      id: "desktop-window",
-      label: "窗口控制"
+      type: "category",
+      label: "桌面开发",
+      items: [
+        "desktop/window"
+      ]
     }
   ],
 };
