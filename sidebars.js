@@ -76,9 +76,10 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "桌面开发",
+      label: "桌面应用开发",
       items: [
-        "desktop/window"
+        "desktop/window",
+        "desktop/custom-html"
       ]
     }
   ],
