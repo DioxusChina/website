@@ -7,9 +7,10 @@ title: 初始化
 
 在本章中，我们来了解一下如何初始化一个最简单的 Dioxus 项目。
 
-首先，我们使用 `cargo` 来新建一个 Rust 二进制项目：
+首先，我们先创建一个项目目录，并进入目录使用 `cargo` 来初始化一个 Rust 二进制项目：
 
 ```shell
+cd myProject
 cargo init --bin
 ```
 
@@ -59,7 +60,7 @@ fn App(cx: Scope) -> Element {
 :::caution
 上面提到的 Web 平台需要 WASM 编译环境作为支持：
 
-添加编译目标：`rustup target add wasm32-unknown-unknown`
+通过命令添加编译目标：`rustup target add wasm32-unknown-unknown`
 
 如果没添加 wasm 的话，将无法完成 web 应用的编译。
 :::
