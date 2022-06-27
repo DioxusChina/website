@@ -137,9 +137,9 @@ cx.render(rsx! {
 let show_title = true;
 rsx!(
     div {
-        show_title.and_then(|| rsx!{
+        show_title.then(|| cx.render(rsx! {
             "这是文章标题"
-        })
+        }))
     }
 )
 ```
