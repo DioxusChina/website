@@ -23,7 +23,7 @@ let value = use_state(&cx, || "当前默认值".to_string());
 cx.render(rsx! {
     input { value: "{value}" }
     button {
-        onclick: |_| println!("当前 Value 的值为：{value}"),
+        onclick: move |_| println!("当前 Value 的值为：{value}"),
         "获取输入内容"
     }   
 })
@@ -43,7 +43,7 @@ cx.render(rsx! {
         oninput: |e| value.set(e.value.clone())
     }
     button {
-        onclick: |_| println!("当前 Value 的值为：{value}"),
+        onclick: move |_| println!("当前 Value 的值为：{value}"),
         "获取输入内容"
     }   
 })
