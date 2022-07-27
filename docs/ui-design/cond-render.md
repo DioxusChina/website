@@ -91,7 +91,7 @@ rsx! {
 那我们来找一个结局方案：
 
 ```rust
-let page = if props.account_state {
+let page = if cx.props.account_state {
     cx.render(rsx! { p { "应用页面" } })
 } else {
     cx.render(rsx! { p { "登录页面" } })
