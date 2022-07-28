@@ -42,7 +42,7 @@ const config = {
     [
       "@docusaurus/plugin-pwa",
       {
-        debug: true,
+        debug: false,
         offlineModeActivationStrategies: [
           "appInstalled",
           "standalone",
@@ -52,12 +52,12 @@ const config = {
           {
             tagName: "link",
             rel: "icon",
-            href: "/img/dioxus-full.png",
+            href: "/meta/favicon-96x96.png",
           },
           {
             tagName: "meta",
             name: "msapplication-TileImage",
-            content: "/img/dioxus-full.png",
+            content: "/meta/favicon-144x144.png",
           },
           {
             tagName: "link",
@@ -67,12 +67,12 @@ const config = {
           {
             tagName: "meta",
             name: "theme-color",
-            content: "#0F0F0F",
+            content: "#FFFFFF",
           },
           {
             tagName: "meta",
             name: "msapplication-TileColor",
-            content: "#0F0F0F",
+            content: "#FFFFFF",
           },
         ],
       },
