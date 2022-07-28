@@ -34,9 +34,9 @@ use dioxus::prelude::*;
 
 ```rust
 fn App(cx: Scope) -> Element {
-    cx.render(rsx! {
+    cx.render(rsx! ( 
         div { "Hello, world!" }
-    })    
+    ))    
 }
 ```
 我们有一个 `App` 函数，它接受一个 `Scope` 类型的参数，并返回一个 `Element` 类型。
