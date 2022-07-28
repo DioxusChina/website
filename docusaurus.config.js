@@ -24,19 +24,58 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/DioxusChina/website/tree/master/",
+          editUrl: "https://github.com/DioxusChina/website/tree/master/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/DioxusChina/website/tree/master/",
+          editUrl: "https://github.com/DioxusChina/website/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          "appInstalled",
+          "standalone",
+          "queryString",
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/dioxus-full.png",
+          },
+          {
+            tagName: "meta",
+            name: "msapplication-TileImage",
+            content: "/img/dioxus-full.png",
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/meta/manifest.json",
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "#0F0F0F",
+          },
+          {
+            tagName: "meta",
+            name: "msapplication-TileColor",
+            content: "#0F0F0F",
+          },
+        ],
+      },
     ],
   ],
 
@@ -60,7 +99,7 @@ const config = {
           {
             href: "https://qm.qq.com/cgi-bin/qm/qr?k=WYctgoX1PhbnVAEXEZOnT2yHY3_D4K4g&jump_from=webapi",
             label: "Q群：863409183",
-            position: "right", 
+            position: "right",
           },
           {
             href: "https://github.com/DioxusChina/",

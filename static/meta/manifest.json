@@ -1,0 +1,39 @@
+{
+    "short_name": "Tauri",
+    "name": "Tauri Studio",
+    "icons": [
+      {
+        "src": "/img/dioxus-full.png",
+        "type": "image/png",
+        "sizes": "16x16"
+      },
+      {
+        "src": "/img/dioxus-full.png",
+        "type": "image/png",
+        "sizes": "32x32"
+      },
+      {
+        "src": "/img/dioxus-full.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "/img/dioxus-full.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "/img/dioxus-full.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#0F0F0F",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#0F0F0F",
+    "description": "Build smaller, faster, and more secure desktop applications with a web frontend",
+    "categories": ["documentation", "hacktoberfest", "tauri"]
+  }
