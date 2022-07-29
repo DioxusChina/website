@@ -61,6 +61,28 @@ fn App(cx: Scope) -> Element {
 数组：[1, 2, 3, 4, 5]
 ```
 
+### 嵌入表达式
+
+嵌入表达式时需要用到 `format_args!` 这个宏。由于 `rsx!` 宏的特殊性，只能用 `[]` 包裹 `format_args!` 宏来嵌入表达式。
+
+```rust
+rsx!( [format_args!("Hello {}", if enabled { "Jack" } else { "Bob" } )] )
+```
+
+除此之外，`&str` 可以被包裹在 `[]` 中。
+
+```rust
+rsx!( "Hello ",  [if enabled { "Jack" } else { "Bob" }] )
+```
+
+但是更寻常的方法是直接用变量在 `rsx!` 外绑定表达式。
+
+```rust
+let name = if enabled { "Jack" } else { "Bob" };
+rsx! ( "hello {name}" )
+```
+
+
 ### Element 嵌套
 
 我们可以将一个 Element 类型嵌套到另一个 RSX 之中：
