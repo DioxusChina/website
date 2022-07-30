@@ -112,7 +112,7 @@ cx.render(rsx! {
 `cx.render(rsx!{})` 和 `rsx!{}` 都可以直接被嵌套到一个 RSX 之中。所以也可以这么写：
 
 ```rust
-let page = match props.account_state {
+let page = match cx.props.account_state {
     true => rsx!(p { "应用页面" }),
     false => rsx!(p { "登录页面" })
 };

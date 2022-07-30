@@ -61,7 +61,7 @@ fn Post<'a>(cx: Scope<'a ,PostProps<'a>>) -> Element {
     cx.render(rsx! {
         div {
             class: "post",
-            h2 { "{title}" },
+            h2 { "{title}" }
             span { "{content}" }
         }
     })
