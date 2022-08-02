@@ -62,6 +62,66 @@ fn Post(cx: Scope<PostProps>) -> Element {
 ```
 :::
 
+:::info
+列表渲染完整代码在这里:
+```rust
+use dioxus::prelude::*;
+fn main() {
+    dioxus::desktop::launch(App);
+}
+
+#[derive(Props, PartialEq)]
+struct PostProps {
+    title: &'static str,
+    content: &'static str,
+}
+fn Post(cx: Scope<PostProps>) -> Element {
+    cx.render(rsx!(
+        style {
+            [ ".title { font-size: 18px; text-align: center;}",
+                ".content{width:100%;}"]
+        }
+        div {
+            class: "card-content",
+            h1 {class:"title","{cx.props.title}" },
+            p {class:"content","{cx.props.content}" }
+        }
+    ))
+}
+
+fn App(cx: Scope) -> Element {
+    let blogs = vec![
+        ("Hello World", "这是我的第一篇博客"),
+        ("Dioxus 项目", "Dioxus 非常有趣"),
+        ("这是哪里", "这里是 DioxusChina"),
+    ];
+    let ele = blogs.iter().map(|(title, content)| {
+        rsx! {
+            div{
+                class: "card",
+                Post {
+                    title:title,
+                    content: content,
+                }
+            }
+        }
+    });
+    cx.render(rsx! {
+        link {
+            rel: "stylesheet",
+            href: "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+        }
+        div {
+            class: "container",
+            ele
+        }
+    })
+}
+```
+
+![](../../static/img/docs/list-render.png)
+:::
+
 ## 过滤迭代器
 
 Rust 的迭代器非常强大，特别是用于过滤数据时。在构建用户界面时，你可能希望过滤部分的项目列表。

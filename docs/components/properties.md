@@ -12,7 +12,7 @@ title: 组件属性
 ```rust
 #[derive(Props, PartialEq)]
 struct MyProps {
-    name: String
+    name: String,
 }
 ```
 
