@@ -87,7 +87,7 @@ rsx! {
         oninput: |evt| { println!("新的内容被输入了：{:?}", evt) },
     }
     button {
-        onclick: |evt| { println!("按钮被点击了：{:?}", evt) }
+        onclick: |evt| { println!("按钮被点击了：{:?}", evt) },
         "点我试试看！"
     }
 }
