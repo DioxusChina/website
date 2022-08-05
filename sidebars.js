@@ -40,8 +40,8 @@ const sidebars = {
         "ui-design/dyn-render",
         "ui-design/cond-render",
         "ui-design/list-render",
-        "ui-design/special-attributes"
-      ]
+        "ui-design/special-attributes",
+      ],
     },
     {
       type: "category",
@@ -49,8 +49,8 @@ const sidebars = {
       items: [
         "components/intro",
         "components/properties",
-        "components/children"
-      ]
+        "components/children",
+      ],
     },
     {
       type: "category",
@@ -58,30 +58,29 @@ const sidebars = {
       items: [
         "interaction/hooks",
         "interaction/hooks-func",
-        "interaction/user-input"
-      ]
+        "interaction/user-input",
+      ],
     },
     {
       type: "category",
       label: "状态管理",
-      items: [
-        "state/local-state",
-        "state/global-state"
-      ]
+      items: ["state/local-state", "state/global-state"],
     },
     {
       type: "doc",
       id: "scripts",
-      label: "脚本交互"
+      label: "脚本交互",
     },
     {
       type: "category",
       label: "桌面应用开发",
-      items: [
-        "desktop/window",
-        "desktop/custom-html"
-      ]
-    }
+      items: ["desktop/window", "desktop/custom-html"],
+    },
+    {
+      type: "category",
+      label: "有用的crate",
+      items: ["helper-crates/router"],
+    },
   ],
 };
 
