@@ -8,8 +8,7 @@ Dioxus Router 用于在不同界面之间进行跳转显示。如果你熟悉 Re
 ## 创建简单路由
 
 :::info
-引入 Router
-
+您只需要将 `Router` 添加到 features 列表中，即可开启本功能：
 ```toml
 [dependencies]
 dioxus = { version = "0.2.4", features = ["desktop", "router"] }
@@ -37,7 +36,7 @@ fn app(cx: Scope) -> Element {
             navbar{}
             Route { to: "/", self::homepage {}} // 把 homepage 组件挂载到路由上
             Route{ to:"/blog",self::blog{}}
-            Route { to:"", self::not_found{}} // 用来返回匹配路由失败的情况 || Redirect{from:"",to:"/"}
+            Route { to:"", self::not_found{}} // 用来返回匹配路由失败的情况
         }
     })
 }
@@ -115,7 +114,7 @@ fn app(cx: Scope) -> Element {
 ```rust
 fn not_found(cx: Scope) -> Element {
     cx.render(rsx! {
-        Redirect{to:"/"} // 重定向到首页面
+        Redirect{ to: "/" } // 重定向到首页面
     })
 }
 ```

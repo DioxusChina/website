@@ -78,8 +78,8 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "有用的crate",
-      items: ["helper-crates/router"],
+      label: "拓展 Features",
+      items: ["useful-crates/router"],
     },
   ],
 };
