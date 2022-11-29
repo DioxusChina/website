@@ -21,7 +21,7 @@ fn App(cx: Scope) -> Element {
         button { onclick: move |_| count += 1, "Up high!" }
         button { onclick: move |_| count -= 1, "Down low!" }
     ))
-};
+}
 ```
 
 ## 功能亮点
