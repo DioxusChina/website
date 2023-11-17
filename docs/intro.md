@@ -14,7 +14,7 @@ Dioxus 是一款用于构建跨平台用户界面的框架。这本指南将带�
 
 ```rust
 fn App(cx: Scope) -> Element {
-    let mut count = use_state(&cx, || 0);
+    let mut count = use_state(cx, || 0);
 
     cx.render(rsx!(
         h1 { "High-Five counter: {count}" }
