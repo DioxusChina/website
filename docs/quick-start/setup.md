@@ -17,7 +17,8 @@ cargo init --bin
 通过编辑 `Cargo.toml` 加入 Dioxus 包依赖：
 
 ```toml
-dioxus = { version = "0.2.3", features = ["desktop"] }
+dioxus = {version = "0.4.0"}
+dioxus-desktop = {version = "0.4.0"}
 ```
 
 ### Features 选项
