@@ -52,10 +52,10 @@ dioxus-desktop = {version = "0.4.0"}
 use dioxus::prelude::*;
 
 fn main() {
-    dioxus::desktop::launch(App);
+    dioxus_desktop::launch(app);
 }
 
-fn App(cx: Scope) -> Element {
+fn app(cx: Scope) -> Element {
     cx.render(rsx! (
         div { "Hello, world!" }
     ))
