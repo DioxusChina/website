@@ -17,7 +17,8 @@ cargo init --bin
 通过编辑 `Cargo.toml` 加入 Dioxus 包依赖：
 
 ```toml
-dioxus = { version = "0.2.3", features = ["desktop"] }
+dioxus = {version = "0.4.0"}
+dioxus-desktop = {version = "0.4.0"}
 ```
 
 ### Features 选项
@@ -27,6 +28,10 @@ dioxus = { version = "0.2.3", features = ["desktop"] }
 - `macro` - 宏支持（默认开启）
 - `hooks` - Hooks 封装（默认开启）
 - `html` - HTML 相关（默认开启）
+
+
+下面Features 选项，从3.0版本之后已经取消了
+
 - `web` - Web 应用程序支持
 - `tui` - TUI 应用程序支持
 - `desktop` - 桌面应用程序支持
@@ -42,13 +47,15 @@ dioxus = { version = "0.2.3", features = ["desktop"] }
 接下来，我们尝试让应用程序运行起来，我们在 `main.rs` 写下：
 
 ```rust
+#![allow(non_snake_case)]
+// import the prelude to get access to the `rsx!` macro and the `Scope` and `Element` types
 use dioxus::prelude::*;
 
 fn main() {
-    dioxus::desktop::launch(App);
+    dioxus_desktop::launch(app);
 }
 
-fn App(cx: Scope) -> Element {
+fn app(cx: Scope) -> Element {
     cx.render(rsx! (
         div { "Hello, world!" }
     ))

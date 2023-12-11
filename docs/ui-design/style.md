@@ -9,7 +9,7 @@ title: 页面样式
 fn App(cx: Scope) -> Element {
     cx.render(rsx! {
         style {
-            [ ".app { width:100%; background-color:red; }" ]
+            ".app {{ width:100%; background-color:red; }}"
         }
         div {
             class: "app",
@@ -21,10 +21,12 @@ fn App(cx: Scope) -> Element {
 
 我们依然可以在 RSX 中引用 CSS 代码，包括引入一些 CSS UI 框架。
 
+注意：使用上面方式时，记得将.app 后面的{{放在一块，确保中间无空格，要不然会解析失败
+
 ### 引入网络 CSS
 
 ```rsx
-rsx! {
+cx.render(rsx! {
     link {
         rel: "stylesheet",
         href: "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -40,7 +42,7 @@ rsx! {
             }
         }
     }
-}
+})
 ```
 
 我们可以很轻易的使用 UI 框架的样式：
@@ -53,9 +55,9 @@ rsx! {
 如果您不希望通过网络引入 CSS 资源，也可以直接将资源文件打包到二进制应用中。
 
 ```rust
-rsx! {
-    style { [ include_str!("./assets/app.css") ] }
-}
+cx.render(rsx! {
+    style { include_str!("./assets/app.css") }
+})
 ```
 
 通过这种方法可以将某个 CSS 文件引入到应用中。
